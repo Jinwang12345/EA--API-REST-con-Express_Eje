@@ -1,7 +1,6 @@
 # EA_SEMINARIO_5 - API
 
 Este proyecto es una API desarrollada en  Node.js + TypeScript  que utiliza  MongoDB  como base de datos.  
-Sigue los pasos a continuación para instalar y ejecutar el proyecto en tu entorno local.
 ---
 
 # Apuntado
