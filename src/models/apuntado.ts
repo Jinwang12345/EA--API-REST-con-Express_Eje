@@ -1,4 +1,6 @@
 import mongoose, { Schema, Document } from 'mongoose';
+import mongoosePaginate from "mongoose-paginate-v2";
+
 
 export interface IApuntado extends Document {
   userId: mongoose.Types.ObjectId;
@@ -12,5 +14,8 @@ const apuntadoSchema = new Schema<IApuntado>(
   },
   { timestamps: true, versionKey: false }
 );
+apuntadoSchema.plugin(mongoosePaginate);
+apuntadoSchema.index({ userId: 1, eventoId: 1 }, { unique: true });
+
 
 export default mongoose.model<IApuntado>('Apuntado', apuntadoSchema);
